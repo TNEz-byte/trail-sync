@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAIL SYNC</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="image/Screenshot_2026-09-16_205641-removebg-preview.png" alt="Logo Icon" class="logo-icon-img">
+      <span>TRAIL <span class="highlight">SYNC</span></span>
+    </div>
+    <nav class="nav-links">
+      <a href="Main.html" class="active">หน้าแรก</a>
+      <a href="#popular">ยอดนิยม</a>
+      <a href="create-post.html">สร้างทริปเอง</a>
+      <a href="chat.html">แชทกลุ่ม</a>
+    </nav>
+    <div class="user-profile">
+      <i class="fa-regular fa-circle-user"></i>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTAINER ===== -->
+  <main class="container">
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="เที่ยวไหนดี....">
+      </div>
+    </section>
+
+    <!-- Tag Categories -->
+<section class="tag-section">
+      <h3>เดินป่าแบบ.....</h3>
+      <div class="tags-wrapper">
+        <button class="tag">สายชิลล์</button>
+        <button class="tag">สายคอนเทนต์</button>
+        <button class="tag">สายแบ็คแพ็ค</button>
+        <button class="tag">สายแคมป์คาร์</button>
+        <button class="tag">สายปั่น</button>
+        <button class="tag">สายวัฒนธรรม</button>
+        <button class="tag">สายครอบครัว</button>
+        <button class="tag">สายแอดเวนเจอร์</button>
+        <button class="tag">สายทริปสั้น</button>
+        <button class="tag">สายสโลว์ไลฟ์</button>
+        <button class="tag">สายสุขภาพ/บำบัด</button>
+        <button class="tag">สายสำรวจ</button>
+        <button class="tag">สายดูดาว</button>
+        <button class="tag">สายคู่รัก</button>
+      </div>
+    </section>
+    <script>
+    // ดึงปุ่ม tag ทั้งหมดมาใช้งาน
+    const tags = document.querySelectorAll('.tag');
+
+    // วนลูปเพื่อเพิ่ม Event การคลิกให้ทุกปุ่ม
+    tags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        // เมื่อคลิก จะสลับคลาส 'active' (กดปุ่มเดิมจะปิด/เปิดสีส้ม)
+        tag.classList.toggle('active');
+      });
+    });
+  </script>
+
+    <!-- Category Cards Section (ไปป่าไหนดี / สร้างทริปเอง) -->
+    <section class="trip-planner-section">
+      <!-- Left Box: สร้างทริปเอง -->
+      <div class="create-trip-box">
+            <h2>สร้างทริปเอง</h2>
+            <p>สร้างทริปเพื่อให้คนอื่นสามารถมาจอยกับเราได้</p>
+            <a href="create-post.html" class="add-card">
+            <i class="fa-solid fa-plus"></i>
+            </a>
+        </div>
+
+      <!-- Right Box: ไปป่าไหนดี Categories -->
+      <div class="category-grid-box">
+        <h2>ไปป่าไหนดี....</h2>
+        <div class="category-grid">
+          <div class="cat-card">
+            <div class="icon">🥾</div>
+            <h4>สายลุย</h4>
+            <span>460+ more</span>
+          </div>
+          <div class="cat-card">
+            <div class="icon">⛺</div>
+            <h4>สายชิลล์</h4>
+            <span>145+ more</span>
+          </div>
+          <div class="cat-card">
+            <div class="icon">👨‍👩‍👧‍👦</div>
+            <h4>สายครอบครัว</h4>
+            <span>98+ more</span>
+          </div>
+          <div class="cat-card">
+            <div class="icon">📷</div>
+            <h4>สายคอนเทนต์</h4>
+            <span>278+ more</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: หาเพื่อนเดินกัน -->
+    <section class="cards-section" id="popular">
+      <div class="section-header">
+        <h2>หาเพื่อนเดินกัน</h2> <h3>อัปเดต(1เดือนที่แล้ว)</h3>
+      </div>
+      <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/5-2.png" alt="ภูกระดึง">
+          </div>
+          <div class="card-body">
+             <div class="user-info">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="รูปโปรไฟล์" class="user-avatar">
+                <span>มาป่ากันนน</span>
+            </div>   
+            <h3>ภูกระดึง</h3>
+            <p class="date">วันที่ 10/10/2026</p>
+            <p class="status">รับจำนวน 10 คน/ขาด 5</p>
+            <a href="join.html" class="btn-orange">ไปกัน</a>
+            <!-- <button class="btn-orange">ไปกัน</button> -->
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/1e742e47-2db1-4678-9738-a3bfb434cf7f.jpg" alt="ภูสอยดาว">
+          </div>
+          <div class="card-body">
+            <div class="user-info">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="รูปโปรไฟล์" class="user-avatar">
+                <span>แอตตี้ป่า</span>
+            </div>
+            <h3>ภูสอยดาว</h3>
+            <p class="date">วันที่ 15/11/2026</p>
+            <p class="status">รับจำนวน 5 คน/ขาด 1</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/กห.webp" alt="ดอยหลวงเชียงดาว">
+          </div>
+          <div class="card-body">
+            <div class="user-info">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="รูปโปรไฟล์" class="user-avatar">
+                <span>น้องฟ้าป่าพานแล้ว</span>
+            </div>
+            <h3>ดอยหลวงเชียงดาว</h3>
+            <p class="date">วันที่ 6/1/2027</p>
+            <p class="status">รับจำนวน 14 คน/ขาด 6</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/images (2).jpg" alt="กิ่วแม่ปาน">
+          </div>
+          <div class="card-body">
+            <div class="user-info">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="รูปโปรไฟล์" class="user-avatar">
+              <span>อยากกลับบ้านอะ</span>
+            </div>
+            <h3>กิ่วแม่ปาน</h3>
+            <p class="date">วันที่ 5/12/2026</p>
+            <p class="status">รับจำนวน 4 คน/ขาด 3</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="center-btn">
+        <button class="btn-more">ดูเพิ่มเติม</button>
+      </div>
+    </section>
+
+    <!-- Section 2: ที่เดินป่ายอดนิยม -->
+    <section class="cards-section">
+      <div class="section-header">
+        <h2>ที่เดินป่ายอดนิยม</h2> <h3>อัปเดต(1เดือนที่แล้ว)</h3>
+      </div>
+      <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/p1.jpg" alt="ภูกระดึง">
+          </div>
+          <div class="card-body">
+            <h3>ภูกระดึง <span>(จังหวัดเลย)</span></h3>
+            <p class="desc">เป็นเส้นทางเดินป่าขาลุยที่เหมาะสำหรับมือใหม่เนื่องจากเป็นทางราบ ระยะทางรวมทั้งสิ้นประมาณ 5.5 กม. มีลูกหาบให้บริการสำหรับผู้ที่ต้องการขนของหนักๆ แนะนำจองล่วงหน้า!</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/79b04870-bb4c-11f0-9d69-796130fa7b1d_webp_original.webp" alt="ภูสอยดาว">
+          </div>
+          <div class="card-body">
+            <h3>ภูสอยดาว <span>(จังหวัดอุตรดิตถ์)</span></h3>
+            <p class="desc">ป่าที่มีธรรมชาติบริบูรณ์ เด่นเรื่องลานสนและดอกไม้พรมสีม่วง เน้นการลุยและความสวยงาม มีเส้นทางเดินป่าระยะทางยาว เหมาะกับการพักผ่อน 2 วัน 1 คืน</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-img">
+            <img src="image/images (1).jpg" alt="ดอยหลวงเชียงดาว">
+          </div>
+          <div class="card-body">
+            <h3>ดอยหลวงเชียงดาว <span>(จังหวัดเชียงใหม่)</span></h3>
+            <p class="desc">ยอดดอยสูงอันดับ 3 ของประเทศ เป็นพื้นที่ทางธรรมชาติที่มีพืชพรรณและวิวทิวทัศน์สวยงาม 360 องศา</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-img card-img-overlay">
+            <img src="image/kew-mae-pan-1.jpg" alt="กิ่วแม่ปาน">
+            <div class="overlay-text">
+              <h4>กิ่วแม่ปาน</h4>
+              <span>เชียงใหม่</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>กิ่วแม่ปาน <span>(จังหวัดเชียงใหม่)</span></h3>
+            <p class="desc">เส้นทางเดินศึกษาธรรมชาติระยะทาง 3.2 กิโลเมตร เหมาะสำหรับนักท่องเที่ยวที่ต้องการเดินชมวิวธรรมชาติสดชื่นแบบไม่เหนื่อยเกินไป</p>
+            <button class="btn-orange">ไปกัน</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="center-btn">
+        <button class="btn-more">ดูเพิ่มเติม</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="logo">
+      <img src="image/Screenshot_2026-09-16_205641-removebg-preview.png" alt="Logo Icon" class="logo-icon-img">
+      <span>TRAIL <span class="highlight">SYNC</span></span>
+    </div>
+  </footer>
+
+</body>
+</html>

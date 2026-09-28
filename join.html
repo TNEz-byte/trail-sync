@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAIL SYNC - เข้าร่วมเดินป่า</title>
+  <link rel="stylesheet" href="style3.css">
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="image/Screenshot_2026-09-16_205641-removebg-preview.png" alt="Logo Icon" class="logo-icon-img">
+      <span>TRAIL <span class="highlight">SYNC</span></span>
+    </div>
+    <nav class="nav-links">
+      <!-- กดแล้วกลับหน้าแรก -->
+      <a href="index.html">หน้าแรก</a>
+      <a href="#">ยอดนิยม</a>
+      <a href="create-post.html">สร้างทริปเอง</a>
+      <a href="chat.html">แชทกลุ่ม</a>
+    </nav>
+    <div class="user-profile">
+      <i class="fa-regular fa-circle-user"></i>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTAINER ===== -->
+  <main class="container">
+    <h1 class="page-title">เข้าร่วมเดินป่า</h1>
+
+
+    <div class="trip-card">
+      
+      <!-- ฝั่งซ้าย: รูปภาพสถานที่ -->
+      <div class="trip-image-box">
+        <img src="image/5-2.png" alt="ภูกระดึง">
+      </div>
+
+      <!-- ฝั่งขวา: รายละเอียดทริป -->
+      <div class="trip-content">
+        
+        <!-- ข้อมูลผู้โพสต์ -->
+        <div class="user-info">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="รูปโปรไฟล์" class="user-avatar">
+          <span class="user-name">มาป่ากันนน</span>
+        </div>
+
+        <!-- หัวข้อ และวันที่/จำนวนคน -->
+        <h2 class="trip-title">ภูกระดึง <span class="trip-date">วันที่ 10/10/2026</span></h2>
+        <p class="trip-status">รับจำนวน 10 คน/ขาด 3</p>
+
+        <!-- รายละเอียดข้อความ -->
+        <div class="trip-description">
+          <p>
+            สำหรับทริปนี้เราจะเน้นเดินทางแบบสบายๆ ไม่เร่งรีบ ให้ทุกคนได้ซึมซับธรรมชาติกันอย่างเต็มที่ครับ 
+            โดยเราจะนัดรวมตัวกันตั้งแต่เช้ามืดช่วง 06:00 - 06:30 น. เพื่อเช็กของ จัดสัมภาระขึ้นรถ แล้วออกเดินทางไปด้วยกัน 
+            ระหว่างทางเราจะแวะปั๊มทานอาหารเช้าและซื้อของกินจุกจิกเติมพลังกันก่อน พอดำเนินการเรื่องเอกสารและติดต่อเจ้าหน้าที่อุทยานฯ เรียบร้อยแล้ว ช่วงประมาณ 10:00 น. ก็จะได้เวลาเริ่มก้าวเท้าเข้าสู่ผืนป่ากันครับ
+          </p>
+          <a href="#" class="read-more">อ่านเพิ่ม</a>
+        </div>
+
+        <!-- สมาชิกเดินป่า -->
+        <div class="members-section">
+          <h4>สมาชิกเดินป่า</h4>
+          <div class="members-avatars">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="สมาชิก 1">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="สมาชิก 2">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="สมาชิก 3">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="สมาชิก 4">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150" alt="สมาชิก 5">
+          </div>
+        </div>
+
+        <!-- ปุ่มกดเข้าร่วม (กดแล้วเด้งกลับหน้าแรก หรือขึ้นแจ้งเตือน) -->
+        <div class="action-wrapper">
+          <a href="chat.html" class="btn-join" onclick="alert('เข้าร่วมทริปสำเร็จ!');">ไปเดินด้วย</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="logo">
+      <img src="image/Screenshot_2026-09-16_205641-removebg-preview.png" alt="Logo Icon" class="logo-icon-img">
+      <span>TRAIL <span class="highlight">SYNC</span></span>
+    </div>
+  </footer>
+
+</body>
+</html>

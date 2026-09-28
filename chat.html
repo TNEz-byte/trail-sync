@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAIL SYNC - แชทกลุ่ม ไปเที่ยว</title>
+  <link rel="stylesheet" href="style4.css">
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="image/Screenshot_2026-09-16_205641-removebg-preview.png" alt="Logo Icon" class="logo-icon-img">
+      <span>TRAIL <span class="highlight">SYNC</span></span>
+    </div>
+    <nav class="nav-links">
+      <!-- ลิงก์เชื่อมไปหน้าต่างๆ -->
+      <a href="index.html">หน้าแรก</a>
+      <a href="#">ยอดนิยม</a>
+      <a href="create-post.html">สร้างทริปเอง</a>
+      <a href="chat.html">แชทกลุ่ม</a>
+    </nav>
+    <div class="user-profile">
+      <i class="fa-regular fa-circle-user"></i>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTAINER ===== -->
+  <main class="container">
+    <h1 class="page-title">แชทกลุ่ม ไปเที่ยว</h1>
+
+    <!-- Chat Box ใหญ่ (แบ่งเป็นแถบซ้ายสมาชิก และแถบขวาพื้นที่พิมพ์แชท) -->
+    <div class="chat-card">
+      
+      <!-- ฝั่งซ้าย: รายชื่อสมาชิกกลุ่ม -->
+      <div class="member-sidebar">
+        <h3>สมาชิกกลุ่ม</h3>
+        <div class="member-list">
+          
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="ฉันเอง">
+            <span>ฉันเอง</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="พิกัดหลง">
+            <span>พิกัดหลง</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="ยอดเขาเน้นถ่ายรูป">
+            <span>ยอดเขาเน้นถ่ายรูป</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="ทริปนี้น่าจะรอด">
+            <span>ทริปนี้น่าจะรอด</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150" alt="ขาอ่อนเดินดอย">
+            <span>ขาอ่อนเดินดอย</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="สัมภาระหนักมาก">
+            <span>สัมภาระหนักมาก</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150" alt="แวะพักทุกสิบเมตร">
+            <span>แวะพักทุกสิบเมตร</span>
+          </div>
+
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150" alt="ย่างก้าวเข้าดงยุง">
+            <span>ย่างก้าวเข้าดงยุง</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ฝั่งขวา: พื้นที่แชทและช่องพิมพ์ข้อความ -->
+      <div class="chat-main">
+        
+        <!-- ไอคอนตั้งค่ามุมขวาบน -->
+        <div class="chat-header-tools">
+          <button class="settings-btn" title="ตั้งค่า"><i class="fa-solid fa-gear"></i></button>
+        </div>
+
+        <!-- พื้นที่ข้อความแชท (กลาง) -->
+        <div class="chat-messages">
+          <!-- ข้อความแชทจะมาแสดงตรงนี้ -->
+        </div>
+
+        <!-- ช่องกรอกข้อความด้านล่าง -->
+        <div class="chat-input-wrapper">
+          <input type="text" placeholder="" class="chat-input">
+          <div class="chat-input-tools">
+            <button class="icon-btn" title="บันทึกเสียง"><i class="fa-solid fa-microphone"></i></button>
+            <button class="icon-btn" title="ส่งรูปภาพ"><i class="fa-regular fa-image"></i></button>
+            <button class="icon-btn" title="ส่งสติ๊กเกอร์"><i class="fa-regular fa-face-smile"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="logo">
+      <img src="image/Screenshot_2026-09-16_205641-removebg-preview.png" alt="Logo Icon" class="logo-icon-img">
+      <span>TRAIL <span class="highlight">SYNC</span></span>
+    </div>
+  </footer>
+
+</body>
+</html>

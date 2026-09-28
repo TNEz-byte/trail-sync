@@ -1,0 +1,294 @@
+/* ===== GLOBAL STYLES & LAYOUT ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', sans-serif;
+}
+
+/* ล็อคให้ body สูงเต็มจอ เพื่อดัน footer ไปล่างสุด */
+body {
+  background-color: #0b1736; /* สีน้ำเงินเข้ม */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff; /* <--- เปลี่ยนเป็นสีขาว */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบาๆ ให้แยกกับส่วนล่าง */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b1736; /* <--- เปลี่ยนสีข้อความ TRAIL เป็นสีน้ำเงินเข้ม */
+}
+
+.logo i {
+  color: #0b1736; /* <--- เปลี่ยนสีไอคอนโลโก้เป็นสีน้ำเงินเข้ม */
+}
+
+.logo .highlight {
+  color: #f26522; /* คงสีส้มแบรนด์ไว้ */
+}
+
+.logo img {
+  height: 40px;        /* ปรับความสูงโลโก้ให้อยู่พอดีแถบ Navbar */
+  width: auto;         /* ให้ความกว้างปรับตามสัดส่วนรูปอัตโนมัติ */
+  object-fit: contain; /* ป้องกันไม่ให้รูปเบี้ยว */
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.nav-links a {
+  color: #333333; /* <--- เปลี่ยนสีตัวหนังสือเมนูเป็นสีเทาดำ */
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  opacity: 1;
+  font-weight: 600;
+  color: #0b1736; /* <--- เมนูที่เลือกเน้นสีน้ำเงินเข้ม */
+}
+
+.user-profile {
+  font-size: 24px;
+  color: #0b1736; /* <--- เปลี่ยนไอคอนโปรไฟล์เป็นสีน้ำเงินเข้ม */
+  cursor: pointer;
+}
+
+/* ===== MAIN FORM CONTAINER ===== */
+.form-container {
+  width: 100%;
+  max-width: 900px; /* ความกว้างหน้าฟอร์มกำลังดีตามรูป */
+  margin: 40px auto;
+  padding: 0 20px;
+  flex: 1; /* ดัน footer ลงล่างสุดเสมอ */
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/* ===== FORM INPUTS GRID ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* สไตล์ Input, Select, Date */
+.form-group input, 
+.form-group select {
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  padding: 0 15px;
+  font-size: 15px;
+  outline: none;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Prompt', sans-serif;
+  box-sizing: border-box;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%22%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px auto;
+}
+
+.form-group select:disabled {
+  background-color: #e0e0e0;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* ===== CONTENT GRID (กล่องรูปซ้าย - กล่องข้อความขวา) ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* กล่องซ้าย 280px กล่องขวายืดเต็ม */
+  gap: 25px;
+  margin-bottom: 35px;
+  align-items: stretch;
+}
+
+/* กล่องอัปโหลดรูป (ฝั่งซ้าย) */
+.upload-card {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-radius: 16px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.upload-card i {
+  font-size: 50px;
+  color: #000000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-card span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Hover Effect กล่องอัปโหลดรูป */
+.upload-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.upload-card:hover i {
+  color: #f26522; /* เปลี่ยนไอคอนเป็นสีส้ม */
+}
+
+/* กล่องใส่ข้อความ (ฝั่งขวา) */
+.textarea-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  height: 300px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.textarea-card textarea {
+  width: 100%;
+  height: 85%;
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 16px;
+  color: #333333;
+  font-family: 'Prompt', sans-serif;
+  background: transparent;
+}
+
+.textarea-card textarea::placeholder {
+  color: #555555;
+}
+
+/* ไอคอนมุมขวาด้านล่างของกล่องข้อความ */
+.textarea-tools {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.tool-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.tool-btn:hover {
+  color: #f26522;
+  transform: scale(1.15);
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.form-submit-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-post {
+  background-color: #f26522;
+  color: #ffffff;
+  border: none;
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(242, 101, 34, 0.3);
+}
+
+.btn-post:hover {
+  background-color: #d95316;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(242, 101, 34, 0.5);
+}
+
+.btn-post:active {
+  transform: translateY(0);
+}
+
+/* ===== FOOTER (ติดขอบล่างสุดสีดำ) ===== */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  background-color: #ffffff; 
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+}
+
+.footer .logo {
+  color: #0b1736; 
+}
+
+.footer .logo .highlight {
+  color: #f26522; 
+}

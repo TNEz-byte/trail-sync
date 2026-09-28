@@ -1,0 +1,434 @@
+/* ===== GLOBAL STYLES ===== */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  background-color: #0b1736; 
+  color: #ffffff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b1736; 
+}
+
+.logo-icon-img {
+  width: 32px;  
+  height: 32px; 
+  object-fit: contain;
+}
+
+.logo .highlight {
+  color: #f26522; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.nav-links a {
+  color: #333333; 
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  opacity: 1;
+  font-weight: 600;
+  color: #0b1736;
+}
+
+.user-profile {
+  font-size: 24px;
+  color: #0b1736; 
+  cursor: pointer;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  background-color: #ffffff;
+  width: 600px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box i {
+  color: #777;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* ===== TAG SECTION ===== */
+.tag-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tag-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* สไตล์พื้นฐานของปุ่มแท็ก (ก่อนกด) */
+.tag {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  opacity: 0.8;
+}
+
+/* สไตล์เมื่อถูกกดเลือก ( active ) จะเปลี่ยนเป็นสีส้ม */
+.tag.active {
+  background-color: #f26522;
+  border-color: #f26522;
+  color: #ffffff;
+}
+
+/* ===== TRIP PLANNER SECTION ===== */
+.trip-planner-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.create-trip-box, .category-grid-box {
+  text-align: center;
+}
+
+.create-trip-box h2, .category-grid-box h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.create-trip-box p {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.create-trip-box a{
+  height: 240px;
+}
+
+.add-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 180px;
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;     
+  width: 100%;               
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.add-card i {
+  font-size: 50px;
+  color: #333333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.add-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.add-card:hover i {
+  color: #f26522; 
+  transform: rotate(90deg); 
+}
+.add-card:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cat-card {
+  background-color: #122147;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cat-card:hover {
+  transform: translateY(-3px);
+}
+
+.cat-card .icon {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.cat-card h4 {
+  font-size: 14px;
+}
+
+.cat-card span {
+  font-size: 10px;
+  color: #888;
+}
+
+/* ===== CARDS SECTION ===== */
+.cards-section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+}
+.section-header h3{
+  font-size: 10px;
+  font-weight: lighter;
+  color: #aaa;
+}
+
+.section-header .sub-link {
+  font-size: 11px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  position: relative;
+  height: 140px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-overlay {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* สไตล์รูปภาพโปรไฟล์ */
+.user-avatar {
+  width: 22px;              
+  height: 22px;             
+  border-radius: 50%;       
+  object-fit: cover;       
+}
+
+.card-body h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.card-body h3 span {
+  font-size: 10px;
+  color: #777;
+  font-weight: normal;
+}
+
+.card-body .date, .card-body .status {
+  font-size: 10px;
+  color: #555;
+}
+
+.card-body .desc {
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+/* .btn-orange {
+  background-color: #f26522;
+  color: #ffffff;
+  border: none;
+  padding: 6px 0;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: auto;
+  align-self: flex-end;
+  width: 70px;
+} */
+
+.btn-orange {
+  display: flex;                  
+  justify-content: center;       
+  align-items: center;           
+  background-color: #f26522;     
+  color: #ffffff ;      
+  text-decoration: none ; 
+  width: 100px;                  
+  height: 38px;                  
+  border-radius: 10px;           
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: auto;             
+  margin-top: 10px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  border: none
+}
+
+.btn-orange:hover {
+  background-color: #d95316;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.center-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-more {
+  background-color: #f26522;
+  color: #ffffff;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  background-color: #ffffff; 
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+}
+
+.footer .logo {
+  color: #0b1736; 
+}
+
+.footer .logo .highlight {
+  color: #f26522; 
+}
